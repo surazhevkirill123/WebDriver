@@ -14,7 +14,7 @@ public class GoogleCloudMainPage extends AbstractPage {
     @FindBy(xpath = "//div[@class='devsite-cse-results']")
     WebElement resultsPage;
 
-    @FindBy(xpath = "//b[text()='Google Cloud Platform Pricing Calculator']")
+    @FindBy(xpath = "//b[text()='Google Cloud Platform Pricing Calculator' or text()='Google Cloud Pricing Calculator']")
     WebElement resultPattern;
 
     public GoogleCloudMainPage(WebDriver driver) {

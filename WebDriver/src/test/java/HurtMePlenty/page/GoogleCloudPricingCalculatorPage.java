@@ -110,10 +110,10 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
         dropdownMachineType.click();
         waitForWebElementVisible(itemMachineType).click();
         checkboxAddGPUs.click();
-        waitForWebElementVisible(dropboxNumberOfGPUs).click();
-        waitForWebElementVisible(itemNumberOfGPUs).click();
         dropboxGPUType.click();
         waitForWebElementVisible(itemGPUType).click();
+        waitForWebElementVisible(dropboxNumberOfGPUs).click();
+        waitForWebElementVisible(itemNumberOfGPUs).click();
         dropdownSSD.click();
         waitForWebElementVisible(itemSSD).click();
         dropdownLocation.click();

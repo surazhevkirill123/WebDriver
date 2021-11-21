@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class GoogleCloudTest extends AbstractTest {
     GoogleCloudMainPage cloudMainPage;
-    String SEARCH_TERM_MAIN_PAGE = "Google Cloud Platform Pricing Calculator";
+    String SEARCH_TERM_MAIN_PAGE = "Google Cloud Pricing Calculator";
     GoogleCloudPricingCalculatorPage cloudCalculatorPage;
 
     @Test(description = "Fill in estimation form")
