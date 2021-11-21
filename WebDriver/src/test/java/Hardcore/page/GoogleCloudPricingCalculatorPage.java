@@ -73,7 +73,7 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     @FindBy(xpath = "//button[@aria-label='Email Estimate']")
     WebElement buttonEmailEstimate;
 
-    @FindBy(xpath = "//input[@ng-model='emailQuote.user.email']")
+    @FindBy(xpath = "//input[@ng-model='emailQuote.user.email' and @ng-model!='emailQuote.user.firstname']")
     WebElement inputEmail;
 
     @FindBy(xpath = "//button[@aria-label='Send Email']")
@@ -104,10 +104,10 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
         dropdownMachineType.click();
         waitForWebElementVisible(itemMachineType).click();
         checkboxAddGPUs.click();
-        waitForWebElementVisible(dropboxNumberOfGPUs).click();
-        waitForWebElementVisible(itemNumberOfGPUs).click();
         dropboxGPUType.click();
         waitForWebElementVisible(itemGPUType).click();
+        waitForWebElementVisible(dropboxNumberOfGPUs).click();
+        waitForWebElementVisible(itemNumberOfGPUs).click();
         dropdownSSD.click();
         waitForWebElementVisible(itemSSD).click();
         dropdownLocation.click();
@@ -127,7 +127,7 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     }
 
     public GoogleCloudPricingCalculatorPage clickEmailEstimateButton() {
-        buttonEmailEstimate.click();
+        waitForWebElementVisible(buttonEmailEstimate).click();
         return this;
     }
 
@@ -137,6 +137,6 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage {
     }
 
     public void sendEmail() {
-        buttonSendEmail.click();
+        waitForWebElementVisible(buttonSendEmail).click();
     }
 }
